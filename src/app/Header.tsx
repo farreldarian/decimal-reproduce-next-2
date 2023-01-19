@@ -9,8 +9,8 @@ const NEXT_13_URL = process.env.NEXT_PUBLIC_NEXT_13_URL;
 export default function Header() {
   return (
     <div className="flex gap-6 justify-center">
-      {NEXT_13_URL && <Link href={NEXT_13_URL}>Home</Link>}
       <Link href="/client">Client Component</Link>
+      {NEXT_13_URL && <Link href={NEXT_13_URL}>Next 13</Link>}
     </div>
   );
 }
