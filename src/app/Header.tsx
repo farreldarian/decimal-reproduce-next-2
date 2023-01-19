@@ -4,10 +4,12 @@ import NextLink from "next/link";
 import { PropsWithChildren } from "react";
 import { useRouter } from "next/router";
 
+const NEXT_13_URL = process.env.NEXT_PUBLIC_NEXT_13_URL;
+
 export default function Header() {
   return (
     <div className="flex gap-6 justify-center">
-      {/* <Link href="/">Server Component</Link> */}
+      {NEXT_13_URL && <Link href={NEXT_13_URL}>Home</Link>}
       <Link href="/client">Client Component</Link>
     </div>
   );
