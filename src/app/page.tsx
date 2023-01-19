@@ -1,14 +1,17 @@
-import Form from "./Form";
+import Container from "./Container";
 import Forms from "./Forms";
+import FormsContainer from "./FormsContainer";
+import Header from "./Header";
 import Timer from "./Timer";
 
 export default function Home() {
   return (
-    <main className="grid place-items-center h-screen">
-      <div className="flex flex-col items-center gap-8">
+    <Container>
+      <Header />
+      <FormsContainer>
         <Timer />
         <Forms />
-      </div>
-    </main>
+      </FormsContainer>
+    </Container>
   );
 }
