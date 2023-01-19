@@ -2,19 +2,19 @@
 
 import NextLink from "next/link";
 import { PropsWithChildren } from "react";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 export default function Header() {
   return (
     <div className="flex gap-6 justify-center">
-      <Link href="/">Server Component</Link>
+      {/* <Link href="/">Server Component</Link> */}
       <Link href="/client">Client Component</Link>
     </div>
   );
 }
 
 function Link({ children, href }: PropsWithChildren<{ href: string }>) {
-  const pathname = usePathname();
+  const { pathname } = useRouter();
   const current = pathname === href;
 
   return (

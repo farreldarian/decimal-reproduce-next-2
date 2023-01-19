@@ -1,5 +1,3 @@
-import "../app/globals.css";
-
 import Forms from "@/app/Forms";
 import Timer from "@/app/Timer";
 import Link from "next/link";
